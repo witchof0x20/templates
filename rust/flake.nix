@@ -37,7 +37,9 @@
         devShell = pkgs.mkShell {
           inherit buildInputs;
           nativeBuildInputs = nativeBuildInputs ++ [
-            rust_toolchain.default
+            (rust_toolchain.default.override {
+              extensions = [ "rust-src" "rustfmt" "rls" "clippy" ];
+            })
           ];
         };
       }
