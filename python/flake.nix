@@ -13,7 +13,14 @@
       in
       {
         devShell = pkgs.mkShell {
-          packages = with pkgs; [ ];
+          packages = with pkgs; [
+            (python3.withPackages (ps: with ps; [
+              numpy
+              scipy
+              matplotlib
+              scapy
+            ]))
+          ];
         };
       }
     );

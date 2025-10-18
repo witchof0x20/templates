@@ -10,9 +10,16 @@
           Hewwo!
         '';
       };
+      python = {
+        path = ./python;
+        description = "Python with dependencies";
+        welcomeText = ''
+          SssSSssSSsssSSSssSS
+        '';
+      };
       rust = {
         path = ./rust;
-        description = "Rust project with naersk and rust-overlay";
+        description = "Rust project with crane and rust-overlay";
         welcomeText = ''
           Hewwo! It's time for UwUst! :3
         '';
