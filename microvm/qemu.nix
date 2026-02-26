@@ -18,7 +18,7 @@
     # Use fancy accelerated console
     kernelParams = [ "console=hvc0" "8250.nr_uarts=0" ];
     # Have that console in initrd
-    initrd.kernelModules = [ "virtio_console" ];
+    initrd.kernelModules = [ "virtio_console" "virtio_rng" ];
   };
   # No VGA display, only serial console
   systemd.services."autovt@tty1".enable = false;

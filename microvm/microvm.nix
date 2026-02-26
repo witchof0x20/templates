@@ -17,6 +17,14 @@ in
     # Socket filename (TODO: look into whether i can shuffle this away)
     socket = "control.socket";
   };
+  # General stuff
+  i18n.defaultLocale = "en_US.UTF-8";
+  # Cherrypicks from hardened.nix
+  security = {
+    lockKernelModules = true;
+    protectKernelImage = true;
+  };
+  boot.kernelParams = [ "debugfs=off" ];
   # Networking stuff
   networking = {
     hostName = hostname;

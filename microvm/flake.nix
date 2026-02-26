@@ -51,6 +51,8 @@
         my-microvm = nixpkgs.lib.nixosSystem {
           inherit system;
           modules = [
+            # Flake stuff
+            { system.configurationRevision = nixpkgs.lib.mkIf (self ? rev) self.rev; }
             # Microvm module for settings
             microvm.nixosModules.microvm
             # Official nixpkgs minimal config
