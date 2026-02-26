@@ -28,7 +28,7 @@ in
   };
   systemd.network = {
     enable = true;
-    network.networks."10-lan" = {
+    networks."10-lan" = {
       matchConfig.Name = "enp0s3";
       networkConfig.DHCP = "yes";
     };

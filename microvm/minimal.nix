@@ -26,7 +26,6 @@
   systemd.oomd.enable = false;
   systemd.coredump.enable = false;
   services.fstrim.enable = false;
-  systemd.services.lastlog2-import.enable = false;
   systemd.sockets.systemd-rfkill.enable = false;
   systemd.services.systemd-rfkill.enable = false;
   systemd.sockets.systemd-bootctl.enable = false;
