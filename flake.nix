@@ -24,6 +24,10 @@
           Hewwo! It's time for UwUst! :3
         '';
       };
+      microvm = {
+        path = ./microvm;
+        description = "Minimal NixOS microVM with QEMU and virtiofs";
+      };
     };
   };
 }
